@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'MathGameDB',
+        'USER': 'jacob',
+        'PASSWORD': 'Jacobm4120!',
+        'HOST': 'localhost',  # or cloud address later
+        'PORT': '5432',        # default PostgreSQL port
     }
 }
 
