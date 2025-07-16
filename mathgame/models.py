@@ -53,6 +53,11 @@ questions answer options:
 select option, question_text from mathgame_mathquestion as mmq join 
 mathgame_answeroptions as mao on mmq.id = mao.question_id where mao.question_id = 1
 
+multiple choice questions:
+select question_text from mathgame_mathquestion as mmq 
+join mathgame_questiontype as mqt on mmq.id = mqt.math_question_id 
+where mqt.name = 'multiple_choice' 
+
 sql queries for later use:
 INSERT INTO mathgame_answeroptions (question_id, option) VALUES
 (1, '3'), (1, '4'), (1, '5'), (1, '6'),
